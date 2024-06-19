@@ -1,0 +1,175 @@
+@import '../../../variables.scss';
+
+@mixin subMenuContainer() {
+  border-radius: 12px;
+  box-shadow: 0 4px 32px 0 $generalOverlayBackground;
+  position: absolute;
+  top: 48px;
+  display: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 16px;
+}
+
+.container-list {
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  
+  &__item-link {
+    display: flex;
+    align-items: center;
+    padding: 0 36px 0 16px;
+    min-height: 40px;
+    color: $mainTextColor;
+  
+    &:hover {
+      background-color: $generalBadgeChipBackground;
+    }
+  }
+}
+
+.search-box {
+  flex: 0 1 730px;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header__start {
+  display: flex;
+  align-items: center;
+
+  &-navigation-button {
+    button {
+      display: flex;
+      padding: 8px;
+    }
+  }
+
+  &-logo {
+    display: flex;
+
+    a {
+      padding: 18px 16px;
+      display: block;
+    }
+
+    &-container {
+      display: block;
+      width: 90px;
+      height: 20px;
+    }
+
+    &__country-code {
+      font-size: 10px;
+      color: #606060;
+      margin: 12px 0 0 -10px;
+    }
+  }
+}
+
+.end-part {
+  display: flex;
+
+  button:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  .perfil-icon {
+    margin-inline: 8px;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    overflow: hidden;
+  }
+}
+
+.new-video-action {
+  @include subMenuContainer();
+  right: 132px;
+
+  .button-shape-icon {
+    margin-right: 16px;
+  }
+
+  &__text {
+    flex-grow: 1;
+  }
+}
+
+.notifications-content {
+  @include subMenuContainer();
+  right: 85px;
+  width: 480px;
+  height: 642px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $generalOverlayBackground;
+
+    &-title {
+      margin-left: 8px;
+      margin-right: auto;
+      line-height: 1.38rem;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    &-icon {
+      margin-right: 8px;
+    }
+  }
+}
+
+.submenu-perfil {
+  @include subMenuContainer();
+  right: 20px;
+  width: 300px;
+
+  &__header {
+    padding: 16px;
+    display: flex;
+    border-bottom: 1px solid $generalOverlayBackground;
+
+    &-chanel {
+      margin-left: 15px;
+
+      span {
+        display: block;
+        line-height: 1.2rem;
+        font-size: 1rem;
+
+        &:last-child {
+          margin-top: 10px;
+
+          a {
+            font-size: .9rem;
+            color: $linkColor;
+          }
+        }
+      }
+    }
+  }
+
+  &__body {
+    a {
+      &.has-secondary {
+        padding-right: 16px;
+      }
+
+      .button-shape-icon {
+        margin-right: 16px;
+      }
+
+      .primary-text {
+        flex-grow: 1;
+      }
+    }
+  }
+}

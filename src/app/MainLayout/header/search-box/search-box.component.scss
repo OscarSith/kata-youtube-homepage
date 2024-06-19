@@ -1,0 +1,66 @@
+@import '../../../../variables.scss';
+
+.search-box-center {
+  flex: 1;
+  display: flex;
+
+  &.has-focus {
+    .search-box__container {
+      margin-left: 0;
+      border: 1px solid #1c62b9;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+
+      input {
+        padding-left: 28px;
+      }
+    }
+    .search-box__search-icon {
+      width: 20px;
+      height: 20px;
+      display: inline-flex;
+      padding-left: 5px;
+    }
+  }
+
+  .search-box {
+    position: relative;
+    width: 100%;
+  
+    &__container {
+      border: 1px solid $defaultBorder;
+      border-right: none;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      display: flex;
+      align-items: center;
+      padding: 0 2px;
+      height: 38px;
+      margin-left: 26px;
+    }
+    
+    &__search-icon {
+      margin: 0 0 0 10px;
+      position: absolute;
+      display: none;
+    }
+    
+    &__input {
+      border: 0;
+      margin: 0 0 0 16px;
+      outline: none;
+      width: 100%;
+    }
+  }
+
+  &__button {
+    border: $defaultBorder solid 1px;
+    padding-inline: 22px;
+    background-color: #f8f8f8;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  &__voice-search {
+    margin-left: 18px;
+  }
+}

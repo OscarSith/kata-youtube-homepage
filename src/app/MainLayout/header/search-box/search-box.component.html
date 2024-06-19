@@ -1,0 +1,31 @@
+<div [ngClass]="'search-box-center ' + hasFocus">
+  <form id="form-search-box" class="search-box">
+    <div class="search-box__container">
+      <div class="search-box__search-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 0 24 24" width="24" focusable="false" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path clip-rule="evenodd" d="M16.296 16.996a8 8 0 11.707-.708l3.909 3.91-.707.707-3.909-3.909ZM18 11a7 7 0 11-14 0 7 7 0 0114 0Z" fill-rule="evenodd"></path></svg>
+      </div>
+      <input type="search" 
+        (focus)="toggleInputSearchFocus($event)"
+        (blur)="toggleInputSearchFocus($event)"
+        name="search_query" 
+        id="search_query"
+        placeholder="Buscar"
+        aria-label="Buscar"
+        role="combobox"
+        autocomplete="off"
+        class="search-box__input">
+    </div>
+  </form>
+  <button id="search-icon-legacy" class="search-box-center__button">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 0 24 24" width="24" focusable="false" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path clip-rule="evenodd" d="M16.296 16.996a8 8 0 11.707-.708l3.909 3.91-.707.707-3.909-3.909ZM18 11a7 7 0 11-14 0 7 7 0 0114 0Z" fill-rule="evenodd"></path></svg>
+  </button>
+  <div class="search-box-center__voice-search">
+    <button class="btn-default-with-icon voice-search-button primary-color">
+      <div class="button-shape-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24" width="24" focusable="false" style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+          <path d="M12 3c-1.66 0-3 1.37-3 3.07v5.86c0 1.7 1.34 3.07 3 3.07s3-1.37 3-3.07V6.07C15 4.37 13.66 3 12 3zm6.5 9h-1c0 3.03-2.47 5.5-5.5 5.5S6.5 15.03 6.5 12h-1c0 3.24 2.39 5.93 5.5 6.41V21h2v-2.59c3.11-.48 5.5-3.17 5.5-6.41z"></path>
+        </svg>
+      </div>
+    </button>
+  </div>
+</div>

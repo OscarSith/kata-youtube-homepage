@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'variables.scss';
+
+@mixin defaultButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: $mainTextColor;
+}
+a {
+  text-decoration: none
+}
+
+.btn-default {
+  @include defaultButton();
+  
+  &-with-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    @include defaultButton();
+
+    &.primary-color {
+      background-color: $generalBadgeChipBackground;
+    }
+
+    &:hover {
+      background-color: $generalOverlayBackground;
+    }
+  }
+}
+
+.button-shape-icon {
+  width: 24px;
+  height: 24px;
+  line-height: 0;
+  margin-inline: auto;
+}
