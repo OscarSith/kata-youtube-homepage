@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 // import { NgClass } from '@angular/common';
 import { SearchBoxComponent } from './search-box/search-box.component';
+import { MainLogoComponent } from '../utils/main-logo/main-logo.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [SearchBoxComponent], // NgClass
+  imports: [SearchBoxComponent, MainLogoComponent], // NgClass
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
