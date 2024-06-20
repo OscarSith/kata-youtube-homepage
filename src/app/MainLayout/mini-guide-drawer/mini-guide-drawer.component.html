@@ -1,0 +1,10 @@
+<div id="mini-guide-drawer">
+  <ul class="list-mini-guide">
+    <li *ngFor="let mini of miniIcons" class="list-mini-guide__list">
+      <a href="#" class="list-mini-guide__link">
+        <div class="list-mini-guide__icon" [innerHTML]="mini.icon | safeHtml"></div>
+        <span class="list-mini-guide__text">{{mini.title}}</span>
+      </a>
+    </li>
+  </ul>
+</div>
