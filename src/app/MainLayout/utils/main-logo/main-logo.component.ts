@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToogleNavbarService } from './../../../services/toogle-navbar.service';
 
 @Component({
   selector: 'app-main-logo',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './main-logo.component.scss'
 })
 export class MainLogoComponent {
+  constructor(public toggleDrawerService: ToogleNavbarService) {}
 
+  toggle() {
+    this.toggleDrawerService.toogleDrawer();
+  }
 }

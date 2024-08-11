@@ -1,0 +1,14 @@
+<div class="video-home">
+  @for (video of videoCategoryService.videos(); track video.id) {
+    <div class="video-home__item">
+      <img
+        [srcset]="video.snippet.thumbnails.medium.url"
+        [alt]="video.snippet.title"
+        class="video-home__img"  />
+        <h3>{{ video.snippet.title }}</h3>
+        <p>{{ video.snippet.channelTitle }}</p>
+    </div>
+  } @empty {
+    <h2>Cargando...</h2>
+  }
+</div>

@@ -3,4 +3,25 @@
   width: 100%;
   box-sizing: border-box;
   z-index: 10;
+  top: 0;
+}
+app-drawer-navigation {
+  position: fixed;
+  top: 0;
+  width: 240px;
+}
+
+app-mini-guide-drawer {
+  position: fixed;
+  left: 0;
+  top: 56px;
+  width: 72px;
+  padding: 0 4px;
+}
+
+#page-manager {
+  display: flex;
+  margin-left: 240px;
+  margin-top: 56px;
+  padding-top: 24px;
 }

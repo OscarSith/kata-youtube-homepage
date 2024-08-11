@@ -58,9 +58,17 @@
     background-color: #f8f8f8;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    height: 40px;
+    cursor: pointer;
+
+    svg {
+      height: 24px;
+      width: 24px;
+    }
   }
 
   &__voice-search {
     margin-left: 18px;
+    height: 40px;
   }
 }

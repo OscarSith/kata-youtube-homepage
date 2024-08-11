@@ -1,0 +1,16 @@
+.video-home {
+  display: flex;
+  margin: 0 16px;
+
+  &__item {
+    margin: 0 8px 40px;
+    width: 25%;
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}

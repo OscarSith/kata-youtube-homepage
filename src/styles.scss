@@ -56,3 +56,12 @@ app-root {
     height: 16px;
   }
 }
+#content.openMiniDrawer .list-mini-guide {
+  display: flex;
+}
+#content.openMiniDrawer #containerDrawer {
+  display: none;
+}
+#content.openMiniDrawer #page-manager {
+  margin-left: 70px;
+}
